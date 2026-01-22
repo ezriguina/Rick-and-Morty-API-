@@ -5,9 +5,8 @@ import { Capitulo } from './capitulo/capitulo';
 import { CapituloDetaill } from './capitulo-detaill/capitulo-detaill';
 
 export const routes: Routes = [
-    {path: 'character',component:character_comp},
-    {path: 'character/:id',component:character_comp_detaill},
-    {path: 'capitulo',component:capitulo_component},
-    {path: 'character/:id',component:capitulo_component_detaill},
-    {path: '',component:PageNotFound},
+    {path: 'character',component:CharacterComponent},
+    {path: 'character/:id',component:CharacterComponentDetaill},
+    {path: 'capitulo',component:Capitulo},
+    {path: 'character/:id',component:CapituloDetaill}
 ];
