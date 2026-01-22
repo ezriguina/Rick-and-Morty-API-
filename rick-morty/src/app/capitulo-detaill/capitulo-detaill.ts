@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,input,InputSignal} from '@angular/core';
 
 @Component({
   selector: 'app-capitulo-detaill',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './capitulo-detaill.css',
 })
 export class CapituloDetaill {
-
+  public id:InputSignal<number> = input.required<number>();
+  
 }
