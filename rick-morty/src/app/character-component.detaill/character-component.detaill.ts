@@ -1,5 +1,5 @@
 import { Component, input,InputSignal } from '@angular/core';
-
+import { Character } from '../model/character';
 @Component({
   selector: 'app-character-component.detaill',
   imports: [],
