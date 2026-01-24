@@ -1,0 +1,40 @@
+.character-list {
+  background-color: grey;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.character-card {
+  flex: 1 1 220px;
+  max-width: 240px;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.character-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.character-name {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}

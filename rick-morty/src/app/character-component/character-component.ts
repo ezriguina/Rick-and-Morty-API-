@@ -5,13 +5,16 @@ import { RickMorty } from '../service/rick-morty';
 
 @Component({
   selector: 'app-character-component',
-  imports: [],
+  imports: [RouterOutlet  ],
   templateUrl: './character-component.html',
   styleUrl: './character-component.css',
 })
 export class CharacterComponent {
 public characters :Signal<Character[]>;
 protected title ="LIST CHARACTERS RICK AND MORTY " ;
+alive:Signal<string> = signal("img/green.png");
+died : Signal <string > =signal("img/red.png") ;
+rm :Signal <string> = signal("img/rm.png");
 
 constructor( public RickMorty_service : RickMorty  ){
   //this.characters=this.RickMorty_service.get_character();

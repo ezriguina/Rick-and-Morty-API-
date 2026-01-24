@@ -10,4 +10,5 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('rick-morty');
   public background:Signal<string> =signal("img/rick.jpg");
+  public rick_foto :Signal<string> =signal("img/rm.jpg");
 }

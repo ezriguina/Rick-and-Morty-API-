@@ -1,3 +1,20 @@
-<p>character-component works!</p>
-@for(charcater of charcater)
+<input type="text" name="buscador " value="buscador">
+<button type="submit" >BUSCAR</button>
+<ul class="character-list">
+  @for (character of characters(); track character.id) {
+    <li class="character-card">
+      <img [src]="character.image" [alt]="character.name">
+      <div class="card-content">
+        <p class="character-name">{{ character.name }}</p>
+        <p class="character-name">{{ character.status }}</p>
+        <p class="character-name">{{ character.species }}</p>
+        <p class="character-name">{{ character.type }}</p>
+        <p class="character-name">{{ character.gender }}</p>
+        <p class="character-name">{{ character.created }}</p>
+        
+      </div>
+    </li>
+  }
+</ul>
+
 <router-outlet></router-outlet>
