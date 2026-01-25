@@ -2,8 +2,8 @@
 <button type="submit" >BUSCAR</button>
 <ul class="character-list">
   @for (character of characters(); track character.id) {
-    <li class="character-card">
-      <img [src]="character.image" [alt]="character.name">
+    <li class="character-card" >
+      <a [routerLink]="['/character',character.id]"><img [src]="character.image" [alt]="character.name"></a>
       <div class="card-content">
         <p class="character-name">{{ character.name }}</p>
         <p class="character-name">{{ character.status }}</p>

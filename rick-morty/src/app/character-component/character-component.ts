@@ -2,10 +2,10 @@ import { Component,signal,Signal,WritableSignal } from '@angular/core';
 import { Character } from '../model/character';
 import { RouterOutlet } from '@angular/router';
 import { RickMorty } from '../service/rick-morty';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-character-component',
-  imports: [RouterOutlet  ],
+  imports: [RouterOutlet,RouterLink  ],
   templateUrl: './character-component.html',
   styleUrl: './character-component.css',
 })

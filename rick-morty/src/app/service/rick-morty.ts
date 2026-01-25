@@ -79,6 +79,10 @@ export class RickMorty {
       error : (error:any) => {},
       complete : () => {}
     }) ;
-  }
+  }public get_character_byid(id: number) {
+  return this._http.get<Character>(`${this.API_character}/${id}`);
+}
+
+
   //character:WritableSignal<Character[]>;
 }

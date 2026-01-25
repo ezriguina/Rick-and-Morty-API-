@@ -1,1 +1,14 @@
-<p>character-component.detaill works!</p>
+@if (character()!==null) {
+  <div class="detail-card">
+    <img [src]="character().image" [alt]="character()!.name">
+    <h2>{{ character().name }}</h2>
+    <p>Status: {{ character().status }}</p>
+    <p>Species: {{ character().species }}</p>
+    <p>Type: {{ character().type }}</p>
+    <p>Gender: {{ character().gender }}</p>
+    <p>Created: {{ character().created }}</p>
+  </div>
+} @else {
+  <p>Cargando personaje...</p>
+}
+<router-outlet></router-outlet>
