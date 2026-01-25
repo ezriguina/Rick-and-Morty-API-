@@ -1,11 +1,21 @@
-<div class="RICK_cont">
-<h1 style="color: black;">RICK AND MORTY API </h1>
-<img src="img/rm.png" alt="">
-<a [routerLink]="['/character']">Characteres RICK AND MORTY
-  <img [src]="rick_foto()" alt="">
-</a>
-<a [routerLink]="['/capitulo']">Capitulos RICK AND MORTY 
-  <img [src]="rick_foto()" alt="">
-</a>
-<img src="img/rm.png" alt="">
-<router-outlet />
+<div class="rick-container">
+  <header class="rick-header">
+    <img src="img/rm.png" alt="Rick and Morty logo" class="logo">
+    <h1>Rick and Morty API</h1>
+    <p>Explora personajes y capitulos de RICK AND MORTY </p>
+  </header>
+
+  <section class="rick-actions">
+    <a class="rick-card" routerLink="/character">
+      <img [src]="rick_foto()" alt="Rick">
+      <span>Personajes</span>
+    </a>
+
+    <a class="rick-card" routerLink="/capitulo">
+      <img [src]="rick_foto()" alt="Rick">
+      <span>Capitulos</span>
+    </a>
+  </section>
+
+  <router-outlet></router-outlet>
+</div>
