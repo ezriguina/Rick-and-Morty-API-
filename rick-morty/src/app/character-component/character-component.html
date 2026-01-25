@@ -1,17 +1,17 @@
-<input type="text" name="buscador " value="buscador">
-<button type="submit" >BUSCAR</button>
+<div class="m-3">
+  <input type="text" class="form-control" placeholder="Paràmetres de cerca: 'rick'" aria-label="Paràmetres de cerca, separats per comes" [(ngModel)]="searchParams">
+</div>
+<div class="clearfix">
+  <button type="button" class="btn btn-success float-end m-3" (click)="retrieveSearch()">Consultar</button>
+  <button type="button" class="btn btn-danger float-end mt-3" (click)="clearForm()">Cancel·lar</button>
+</div>
 <ul class="character-list">
   @for (character of characters(); track character.id) {
     <li class="character-card" >
       <a [routerLink]="['/character',character.id]"><img [src]="character.image" [alt]="character.name"></a>
       <div class="card-content">
         <p class="character-name">{{ character.name }}</p>
-        <p class="character-name">{{ character.status }}</p>
-        <p class="character-name">{{ character.species }}</p>
-        <p class="character-name">{{ character.type }}</p>
-        <p class="character-name">{{ character.gender }}</p>
-        <p class="character-name">{{ character.created }}</p>
-        
+      
       </div>
     </li>
   }

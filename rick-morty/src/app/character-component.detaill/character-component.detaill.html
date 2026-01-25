@@ -1,12 +1,12 @@
 @if (character()!==null) {
   <div class="detail-card">
-    <img [src]="character().image" [alt]="character()!.name">
-    <h2>{{ character().name }}</h2>
-    <p>Status: {{ character().status }}</p>
-    <p>Species: {{ character().species }}</p>
-    <p>Type: {{ character().type }}</p>
-    <p>Gender: {{ character().gender }}</p>
-    <p>Created: {{ character().created }}</p>
+    <img [src]="character().image" >
+    <h2>{{ character().name }}</h2><br>
+    <p>Status: {{ character().status }}</p><br>
+    <p>Species: {{ character().species }}</p><br>
+    <p>Type: {{ character().type }}</p><br>
+    <p>Gender: {{ character().gender }}</p><br>
+    <p>Created: {{ character().created }}</p><br>
   </div>
 } @else {
   <p>Cargando personaje...</p>

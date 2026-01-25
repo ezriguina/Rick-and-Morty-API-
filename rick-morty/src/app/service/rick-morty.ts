@@ -31,6 +31,7 @@ export class RickMorty {
     this.capitulo =this._Capitulo.asReadonly();
     this.get_capitulo()
   }
+ 
 
   public get_capitulo(){
     this._http.get(this.API_capitulo).subscribe({
@@ -79,10 +80,47 @@ export class RickMorty {
       error : (error:any) => {},
       complete : () => {}
     }) ;
+
   }public get_character_byid(id: number) {
   return this._http.get<Character>(`${this.API_character}/${id}`);
 }
+  public get_capitulo_by_id(id:number){
+    return this._http.get<Capituloo>(`${this.API_capitulo}/${id}`)
+  }
 
+   retrieveImageSearch(searchTags: string[]) {
+    let searchParam: string = "";
+    for(let i=0; i<searchTags.length; i++) {
+      searchParam += searchTags[i];
+      if(i < searchParam.length - 1) searchParam += "+";
+    }
+    
+    const url = this.API_character + "&q=" + searchParam ;
+    
+    this._http.get(url).subscribe({
+      next: (value: any) => {
+        let characters: Character[] = [];
+       value.results.forEach((elmnt :any )=>{
+        let character : Character = new Character();
+        character.id = elmnt.id ;
+        character.name=elmnt.name ;
+        character.status=elmnt.status;
+        character.species=elmnt.species; 
+        character.type=elmnt.type ;
+        character.gender=elmnt.gender ;
+        character.image=elmnt.image; 
+        character.created =elmnt.created; 
+
+        characters.push(character) ;
+
+        });
+        this._Character.set(characters);
+        
+      },
+      error: (error: any) => {},
+      complete: () => {}
+    });
+  }
 
   //character:WritableSignal<Character[]>;
 }

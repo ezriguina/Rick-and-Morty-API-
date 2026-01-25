@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
 export class CharacterComponentDetaill {
 
   character: WritableSignal<Character> = signal(new Character());
-
+  
   constructor(private rickMortyService: RickMorty , private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
       const id = Number(params['id']);

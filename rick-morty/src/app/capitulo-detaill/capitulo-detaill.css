@@ -1,0 +1,55 @@
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #0b0c10;
+}
+
+.detail-card {
+  background: #1f2833;
+  color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 700px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+  transform: scale(1.02);
+}
+
+.detail-image {
+  width: 300px;
+  object-fit: cover;
+  border-right: 3px solid #66fcf1;
+}
+
+.detail-info {
+  padding: 25px;
+  flex: 1;
+}
+
+.detail-info h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #66fcf1;
+}
+
+.detail-info p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.detail-info span {
+  color: #45a29e;
+  font-weight: bold;
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 20px;
+}

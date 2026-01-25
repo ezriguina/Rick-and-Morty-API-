@@ -5,7 +5,7 @@
 <ul class="character-list">
   @for (capitulo of capitulos(); track capitulo.id) {
     <li class="character-card">
-        <img src="img/rm.png" alt="">
+        <a [routerLink]="['/capitulo',capitulo.id]"><img [src]="foto()" alt="img_cap"></a>
       <div class="card-content">
         <p class="character-name">{{ capitulo.name}}</p>
         <p class="character-name">{{ capitulo.air_date }}</p>
